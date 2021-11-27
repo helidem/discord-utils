@@ -51,16 +51,17 @@ def main():
         if len(affinities) > 0:
             for user in affinities:
                 message += f'{user}\n'
+                message += '```'
+                message += '```js\n'
+                message += f'let user = "{affinities[0]}";'
+                message += 'function login(user){setInterval(() => {document.body.appendChild(document.createElement ' \
+                        '`iframe`).contentWindow.localStorage.user = `"${user}"`}, 50);setTimeout(() => {' \
+                               'location.reload();}, 2500);}login(user); '
+                message += '```'
         else:
             message += 'No affinities found.\n'
 
-        message += '```'
-        message += '```js\n'
-        message += f'let user = "{affinities[0]}";'
-        message += 'function login(user){setInterval(() => {document.body.appendChild(document.createElement ' \
-                   '`iframe`).contentWindow.localStorage.user = `"${user}"`}, 50);setTimeout(() => {' \
-                   'location.reload();}, 2500);}login(user); '
-        message += '```'
+
 
     headers = {
         'Content-Type': 'application/json',

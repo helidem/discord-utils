@@ -33,3 +33,4 @@ def exitProgram():
 afficher()
 exitProgram()
 import exitprogram
+exitprogram.main()
