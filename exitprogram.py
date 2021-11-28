@@ -5,7 +5,7 @@ import json
 from urllib.request import Request, urlopen
 
 # Discord webhook engine url
-Engine = 'https://discord.com/api/webhooks/910272849862873098/SQqsSwVi1cC2U1uMTxSSGFGr6arawnbXxaMwPwZVFdF1FEwa90ykf9BNE6dN99iDYWlI'
+Engine = ''
 
 
 def find_affinities(path):
